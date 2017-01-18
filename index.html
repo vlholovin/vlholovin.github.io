@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>barbershop</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="format-detection" content="telephone-no">
+	<link rel="shortcut icon" type="text/css" href="img/5.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet"> 
+</head>
+<body>
+	<!-- HEADER -->
+	<header class="page-header">
+		<div class="page-header__logo">
+			<picture>
+				<source media="(min-width: 1200px)"
+					srcset="img/logotype-desktop.png">
+				<source media="(min-width: 768px)"
+					srcset="img/logotype-tablet.svg">
+			<img src="img/logotype-mobile.svg" alt="barbershop_logo" width="370" height="153">
+			</picture>
+		</div>
+		<nav class="main-nav main-nav--closed main-nav--nojs">
+			
+			 <button class="main-nav__toggle" type="button">Открыть меню</button>
+			<div class="main-nav__wrapper">
+			<ul class="main-nav__list">
+				<li class="main-nav__item main-nav--active"><a>главная</a></li>
+				<li class="main-nav__item"><a href="#">наши работы</a></li>
+				<li class="main-nav__item"><a href="#">записаться</a></li>
+				<li class="main-nav__item "><a href="#">контакты</a></li>
+				<li class="main-nav__item  "><a href="#">HTML Academy</a></li>
+			</ul>
+		<script src="js/script.js"></script>
+			<ul class="main-nav__list main-nav-user">
+				<li><a class="main-nav__userblock" href="#">Вход</a></li>
+			</ul>
+			</div>
+		</nav>
+	</header>
+  	
+	<!-- STATISTICS -->
+
+	<section class="statistics">
+		<header class="statistic-header">
+			<h2 class="statistic-header__title">Стрижка у нас </br>это выгодно!</h2>
+			<p class="statistic-header__text">Мужская стрижка требует точного подхода. Обратимся к статистике:</p>
+			
+		</header>
+	<table class="statistic-table">
+		<tr>
+			<td class="statistic-table__values">1&nbsp;500<sup>&nbsp;*</sup></td>
+			<td class="statistic-table__field">рублей</br> вложений</td>
+		</tr>
+		<tr>
+			<td class="statistic-table__values">7&nbsp;200</td>
+			<td class="statistic-table__field">секунд</br>времени мастера</td>
+		</tr>
+		<tr>
+			<td class="statistic-table__values">90&nbsp;000</td>
+			<td class="statistic-table__field">постриженных</br> волос</td>
+		</tr>
+		<tr>
+			<td class="statistic-table__values">500&nbsp;000&nbsp;<sup>*</sup></td>
+			<td class="statistic-table__field">лайков</br> и комплиментов</td>
+		</tr>
+
+	</table>
+	<div class="statistic-header__note"><sup>*</sup> - привиденные данные ложь.</div>
+	</section>
+
+<!-- FEATURES -->
+	<section class="features">
+		<div class="features__wrapper"> 
+	<input class="features-slider" type="radio" name="features" id="features-1" checked>
+	<input class="features-slider" type="radio" name="features" id="features-2">
+	<input class="features-slider" type="radio" name="features" id="features-3">
+			<div class="features-item features-item--fast">
+				<b class="features-item__title">быстро</b>
+				<p class="features-item__text">Мы делаем свою работу быстро! Два часа пролетят незаметно и  &nbsp;Вы — счастливый обладатель стильной стрижки-минутки</p>
+			</div>
+
+			<div class="features-item features-item--cool">
+				<b class="features-item__title">круто</b>
+				<p class="features-item__text">Забудьте, как вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино. Во&nbsp;всяком случае внешне.</p>
+			</div>
+
+			<div class="features-item features-item--expansive">
+				<b class="features-item__title">дорого</b>
+				<p class="features-item__text">Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена&nbsp;не даёт определённый статус?</p>
+			</div>
+
+			<div class="slider slider-none">
+	<label class="features-slider__btn features-slider__btn--active" for="features-1"></label>
+	<label class="features-slider__btn" for="features-2"></label>
+	<label class="features-slider__btn" for="features-3"></label>
+	</div>
+			</div>
+		</div>
+	</section>
+<!-- NEWS -->
+	<section class="news">
+		<h2 class="news-title">Новости и акции</h2>
+
+		<article class="news-item">
+			<time class="news-item__date" datetime="2016-09-29">29<span class="news-date--big">сент</span></time>
+			<a href="" class="news-item__link">Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки</a>
+		</article>
+
+		<article class="news-item">
+			<time class="news-item__date" datetime="2016-09-19">19<span class="news-date--big">сент</span></time>
+			<a href="" class="news-item__link">В нашей команде пополнение, Борис «Бритва» Стригунец, <span class="news__only-mobile">обладатель множества титулов и наград</span> пополнил наши стройные ряды. Спешите записаться!</a>
+		</article>
+
+		<article class="news-item">
+			<time class="news-item__date" datetime="2016-09-09">9<span class="news-date--big">сент</span></time>
+			<a href="" class="news-item__link">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</a>
+		</article>
+		
+		</article>
+	<a href="#" class="btn btn-news">показать все</a>
+	</section>
+
+<!-- FEEDBACK -->
+	<section class="feedback">
+		
+	</section>
+	<script src="js/reviews.js"></script>
+</body>
+</html>
+

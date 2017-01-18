@@ -1,0 +1,63 @@
+.clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.triangle(@color: @desktop-bg) {
+
+  &::after {
+    content: "";
+    background-image:
+      linear-gradient(
+        to top right,
+        transparent 50%,
+        @color 50%
+      ),
+      linear-gradient(
+        to top left,
+        transparent 50%,
+       @color 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+  }
+  
+}
+
+
+.container() {
+	margin: 0 auto;
+	width: 280px;
+
+	@media @tablet-width {
+		width: 640px;	
+	}
+
+	@media @desktop-width {
+		width: 960px;
+	}
+}
+
+.container-fluid() {
+  width: auto;
+
+@media @mobile-width {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 83.5%;
+  }
+}

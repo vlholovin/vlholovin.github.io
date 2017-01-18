@@ -1,0 +1,264 @@
+.main-nav {
+	position: relative;
+	width: auto;
+	background-color: @mobile-menu-index;
+	min-height: 50px;
+	width: 100%;
+	margin: 0 auto;
+	}
+.main-nav__toggle {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	font-size: 0;
+	display: block;
+	width: 70px;
+	height: 50px;
+	background-color: @mobile-menu-gamburger;
+	border: 0;
+	cursor: pointer;
+
+&:hover {
+	background-color: #624530;
+	}
+&:active {
+	background-color: #593d29;
+	}
+}
+	 .main-nav--closed .main-nav__toggle::before {
+	content: "";
+  	width: 36px;
+  	height: 2px;
+  	position: absolute;
+  	background-color: @white;
+  	top: 15px;
+  	left: 17px;
+  	box-shadow: 0 8px 0 0 #fff,
+  				0 16px 0 0 #fff;
+	}
+	
+	.main-nav--opened .main-nav__toggle {
+	top: 0;
+	left: 0;
+	right: auto;
+	
+&::before,
+&::after {
+	content: "";
+	position: absolute;
+	width: 36px;
+	height: 2px;
+	background-color: @white;
+	top: 23px;
+	left: 18px;
+	}
+&::before {
+	transform: rotate(45deg);
+	}
+&::after {
+	transform: rotate(-45deg);
+	}
+}
+
+.main-nav__list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 0;
+}
+
+.main-nav__item a{
+	color: @white;
+	font-size: @font-size-base;
+	line-height: @line-height-small;
+	display: block;
+	text-decoration: none;
+	padding: 13px 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-top: 1px solid #71543f;
+	border-bottom: 1px solid #886e5b;
+}
+
+.main-nav__item a[href] {
+&:hover {
+	background-color: @mobile-menu-gamburger;
+	border-top-color: @mobile-menu-gamburger;
+}
+&:active {
+		background-color: #503827;
+		border-top-color: #6a4d38;
+	}
+}
+
+.main-nav__userblock {
+	position: relative;
+	font-size: @font-size-base;
+	line-height: @line-height-small;
+	display: block;
+	text-decoration: none;
+	color: @white;
+	padding: 17px 21px;
+	padding-left: 50px;
+	
+&:hover {
+	background-color: #503827;
+	border-top-color: #6a4d38;
+	}
+
+&:before {
+		content: "";
+		position: absolute;
+		background-image: url(../img/login.png);
+		background-repeat: no-repeat;
+		width: 20px;
+		height: 20px;
+		left: 20px;
+		top: 21px;
+
+	}
+}
+
+@media @mobile-width {
+	.main-nav--closed .main-nav__item {
+	display: none;
+}
+	.main-nav--closed .main-nav--active {
+	display: block;
+	}
+	.main-nav--closed .main-nav--active a {
+	text-align: center;
+	padding-left: 60px;
+	padding-right: 70px;
+	}
+	.main-nav--closed .main-nav__userblock {
+	display: none;
+	}
+}
+
+.main-nav--opened .main-nav__wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	left: 70px;
+	height: 80vh;
+	background-color: @mobile-menu-index;
+}
+ 
+.main-nav--nojs .main-nav__toggle {
+	display: none;
+} 
+
+.main-nav--nojs .main-nav__wrapper {
+	position: static;
+	height: auto;
+}
+
+.main-nav--nojs .main-nav__item {
+	display: block;
+}
+
+.main-nav--nojs .main-nav--active a {
+	padding-left: 21px;
+	padding-right: 21px;
+	text-align: left;
+}
+
+.main-nav--nojs .main-nav__userblock {
+	display: block;
+	background-color: #6a4d38;
+}
+
+
+@media @tablet-width {
+	.main-nav {
+	width: auto;
+	margin: 0 auto;
+	background-color: @black;
+
+&__toggle {
+	display: none;
+	}
+&__wrapper {
+	.container();
+	 display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     flex-grow: 1;
+	}
+&__list {
+	display: flex;
+	flex-direction: row;
+	}
+&__item {
+	margin-right: 30px;
+      
+&:last-child {
+        margin-right: 0;
+      }
+	}
+&__item a {
+	border: none;
+	color: @white;
+	display: block;
+	padding: 24px 0;
+}
+&--active {
+         border-bottom: 2px solid @mobile-menu-index;
+}
+.main-nav__list a[href]:hover {
+	color: @mobile-menu-index;
+	background-color: #000;
+}
+
+
+.main-nav__userblock {
+	font-size: 0;
+	background-color: #000;
+	cursor: pointer;
+	&:before {
+	top: 26px;
+	}
+	&:hover:before {
+	background: url(../img/login-tablet-hover.png)no-repeat;
+	}
+}
+}
+}
+@media @desktop-width {
+.main-nav__item a {
+	padding-left: 24px;
+	padding-right: 24px;
+	text-transform: uppercase;
+}
+
+.main-nav__item {
+	padding-right: 0px;
+}
+.main-nav--active {
+	border: none;
+    position: relative;
+&::before {
+	border-bottom: 3px solid @mobile-menu-index;
+    bottom: -2px;
+    content: "";
+    height: 3px;
+    left: 24px;
+    position: absolute;
+    right: 24px;
+}
+}
+.main-nav__list .main-nav__userblock {
+	font-size: @font-size-base;
+	font-weight: bold;
+	margin-top: 5px;
+	width: 50px;
+	text-transform: uppercase;
+
+&:before {
+	top: 23px;
+}
+}
+
+}
