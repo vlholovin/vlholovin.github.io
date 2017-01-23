@@ -101,6 +101,7 @@
 	</section>
 <!-- NEWS -->
 	<section class="news">
+		
 		<h2 class="news-title">Новости и акции</h2>
 
 		<article class="news-item">
@@ -120,12 +121,71 @@
 		
 		</article>
 	<a href="#" class="btn btn-news">показать все</a>
+
 	</section>
 
-<!-- FEEDBACK -->
+<!-- REVIEWS -->
+
 	<section class="feedback">
-		
+	
+		<div class="feedback-wrapper">
+			<h2 class="feedback-title">отзывы о нас</h2>
+		<input class="feedback-slider" type="radio" name="feedback" id="feedback-1" checked>
+		<input class="feedback-slider" type="radio" name="feedback" id="feedback-2" >
+		<input class="feedback-slider" type="radio" name="feedback" id="feedback-3">
+
+		<div class="feedback-item feedback-item--travis feedback__item--active">
+				<b class="feedback-item__title">Трэвис Баркер</b>
+				<p class="feedback-item__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+			</div>
+
+		<div class="feedback-item feedback-item--philip">
+				<b class="feedback-item__title">Филипп Киркоров</b>
+				<p class="feedback-item__text">Действительно всё на болгарском уровне.</p>
+			</div>
+
+			<div class="feedback-item feedback-item--tom">
+				<b class="feedback-item__title">Том Харди</b>
+				<p class="feedback-item__text">Хорошая стрижка! Был проездом в Китае, заехал: побрили, помыли, цена-качество, ну просто очень восхищен.</p>
+			</div>
+
+	<div class="slider feedback-slider">
+		<label class="feedback-slider__btn feedback-slider__btn--active" for="feedback-1"></label>
+		<label class="feedback-slider__btn" for="feedback-2"></label>
+		<label class="feedback-slider__btn" for="feedback-3"></label>
+		</div>
+
+	 <button class="feedback__toggle feedback__toggle--prev" id="previous">Предыдущий</button> 
+    <button class="feedback__toggle feedback__toggle--next" id="next">Следующий</button> 
+</div>
+	<a href="#" class="btn btn-feedback">оставить свой</a>
 	</section>
+
+	<!-- FOOTER -->
+
+	<footer class="footer">
+
+		<section class="footer-contacts">
+			<b class="footer-contacts__title">Барбершоп Бородинский</b>
+			<p class="footer-contacts__adress">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+			<a href="tel:+78125556666" class="footer-contacts__tel"><span class="contacts-tel--span">Тел.: </span>+7 (812) 555-66-66</a>
+		</section>
+
+		<section class="footer-social">
+			<b class="footer-social__title">Давайте дружить!</b>
+			<div class="social-icons">
+				<a href="" class="social-btn social-btn--vk">vk</a>
+				<a href="" class="social-btn social-btn--fb">fb</a>
+				<a href="" class="social-btn social-btn--im">im</a>
+			</div>
+		</section>
+
+		<section class="footer-copyright">
+			<p class="footer-copyright__title">Разработано:</p>
+      <a href="//htmlacademy.ru/" class="btn btn-copyright">HTML Academy</a>
+		</section>
+
+	</footer>	
 	<script src="js/reviews.js"></script>
 </body>
 </html>

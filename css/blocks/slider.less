@@ -4,7 +4,8 @@
 	text-align: center;
 	line-height: 24px;
 }
-.features-slider__btn {
+.features-slider__btn,
+.feedback-slider__btn {
 	display: inline-block;
 	width: 7px;
 	height: 7px;
@@ -14,14 +15,20 @@
 	transform: rotate(45deg);
 	cursor: pointer;
 	}
+.feedback-slider__btn {
+	border: 2px solid #000;
+}
 
-
-.features-slider[type="radio"] {
+.features-slider[type="radio"],
+.feedback-slider[type="radio"] {
 	display: none;
 }
+
+
 
 @media @tablet-width {
 	.slider {
 		display: none;
 	}
+	
 }
