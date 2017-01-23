@@ -67,6 +67,9 @@ b {
   font-size: 0;
   position: relative;
 }
+.social-btn:hover {
+  opacity: 0.65;
+}
 .social-btn::after {
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -106,6 +109,9 @@ b {
   border-color: #4c4b4b;
   margin-bottom: 25px;
 }
+.btn-copyright:hover {
+  opacity: 0.65;
+}
 @media (max-width: 767px) {
   .btn-feedback {
     display: none;
@@ -141,6 +147,35 @@ b {
   .btn-feedback {
     right: 90px;
     top: 35px;
+  }
+}
+.iam {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+.iam-text {
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: normal;
+  color: #e6e6e6;
+}
+@media (max-width: 767px) {
+  .iam {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media (min-width: 768px) {
+  .iam {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+@media (min-width: 1200px) {
+  .iam {
+    bottom: 0;
+    right: 10px;
   }
 }
 .features {
@@ -333,6 +368,8 @@ b {
 .footer {
   padding-top: 70px;
   text-align: center;
+  position: relative;
+  padding-bottom: 30px;
 }
 .footer-contacts__title,
 .footer-contacts__adress {
@@ -396,6 +433,7 @@ b {
 }
 @media (min-width: 1200px) {
   .footer {
+    padding-bottom: 0;
     flex-wrap: no-wrap;
   }
   .footer-social {
