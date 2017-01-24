@@ -1,0 +1,400 @@
+.portfolio {
+	background-color: #efe7e7;
+	color: #000;
+
+	 &-header__title {
+    .title();
+    
+    margin: 0;
+    padding-bottom: 30px;
+    padding-top: 29px;
+    text-align: center;
+  }
+
+  &-items {
+    .triangle(#efe7e7);
+    
+    padding-bottom: 14px;
+    position: relative;
+  }
+	
+	&__item-photo {
+   	min-width: 280px;
+    height: 176px;
+  }
+
+  &__item--month &__item-photo {
+    background-image: url("../img/photo-1-desktop.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    font-size: 0;
+    height: 470px;
+    width: 100%;
+  }
+
+  &__item-sub {
+    border: 1px solid #be8a65;
+    border-top: none;
+  }
+  &__item {
+    .container();
+    margin-bottom: 20px;
+    
+    &--month {
+      position: relative;
+      
+      &::before {
+        background-color: #be8a65;
+        
+        color: @white;
+        content: "Работа месяца";
+        font-size: 24px;
+        font-weight: bold;
+        left: 0;
+        line-height: 27px;
+        padding-bottom: 11px;
+        padding-left: 27px;
+        padding-right: 17px;
+        padding-top: 12px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 401px;
+      }
+      
+      &::after {
+        content: "";
+        background-image:
+          linear-gradient(
+            to bottom right,
+            #be8a65 50%,
+            transparent 50%
+          ),
+          linear-gradient(
+            to top right,
+            #be8a65 50%,
+            transparent 50%
+          );
+        background-position: 0 100%, 0 0;
+        background-repeat: no-repeat;
+        background-size: 80.1% 100%;
+        height: 50px;
+        left: 179px;
+        position: absolute;
+        top: 401px;
+        width: 25px;
+        z-index: 9;
+      }
+}
+}
+&__item-description {
+    padding-bottom: 20px;
+    padding-left: 23px;
+    padding-right: 20px;
+    padding-top: 23px;
+  }
+  &__item--month &__item-description {
+    padding-top: 19px;
+    padding-bottom: 17px;
+  }
+
+  &__item-name {
+    display: block;
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 14px;
+  }
+  &__item-feedback {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  &__item-services {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px;
+  }
+
+ &__item-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 18px;
+    padding-right: 20px;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: top;
+	
+	 &::before {
+      background-repeat: no-repeat;
+      content: "";
+      position: absolute;
+}
+	&--scissors {
+      padding-left: 58px;
+
+      &::before {
+        background-image: url("../img/scrissors-icon.svg");
+        height: 20px;
+        left: 22px;
+        top: 3px;
+        width: 21px;
+        
+      }
+}
+	&--beard {
+      padding-left: 57px;
+
+      &::before {
+        background-image: url("../img/beard-icon.svg");
+        height: 21px;
+        left: 18px;
+        top: 1px;
+        width: 23px;
+      }
+}
+	&--mustache {
+      padding-left: 68px;
+
+      &::before {
+        background-image: url("../img/mustache-icon.svg");
+        height: 12px;
+        left: 12px;
+        top: 6px;
+        width: 45px;
+      }
+}
+}
+}
+picture {
+	min-width: 280px;
+}
+ @media @tablet-width {
+
+  .portfolio {
+    .triangle(#efe7e7);
+
+    position: relative;
+
+    &::after {
+      height: 42px;
+      bottom: -42px;
+    }
+
+    &-header {
+      .container();
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      padding-bottom: 20px;
+      padding-top: 24px;
+    }
+    &-items {
+      .container();
+      
+      padding-bottom: 10px;
+
+      &::after {
+        content: none;
+      }
+    }
+    &__item {
+      display: flex;
+      margin-bottom: 41px;
+      width: auto;
+      
+        &--month::before,
+        &--month::after {
+          top: 35px;
+          left: 0px;
+          }
+    }
+    picture {
+      min-width: 280px;
+      height: 290px
+    }
+    &__item-photo {
+      width: 280px;
+
+      min-height: 290px;
+    }
+    &__item--month &__item-photo {
+      height: 480px;
+      width: 46%;
+    }
+    &__item-sub {
+      border: 1px solid #eda570;
+    	border-left: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 49px;
+      padding-top: 40px;
+      width: 100%;
+  }
+     &__item--month &__item-sub {
+      padding-top: 24px;
+      width: 51%;
+    }
+     &__item-description {
+      display: block;
+      padding: 0;
+    }
+    &__item-name {
+      padding-bottom: 12px;
+    }
+    &__item-feedback {
+      padding-right: 80px;
+    }
+    &__item--month &__item-feedback {
+      padding-right: 18%;
+      max-width: 300px;
+    }
+    &__item-services {
+      padding: 0;
+      padding-bottom: 23px;
+    }
+    &__item--month &__item-services {
+      padding-bottom: 16px;
+    }
+   &__item-title {
+      padding-right: 17px;
+
+      &--scissors {
+        padding-left: 39px;
+
+        &::before {
+          left: 0px;
+          top: 3px;
+        }
+}
+	 &--beard {
+        padding-left: 39px;
+        padding-right: 40px;
+
+        &::before {
+          left: 0px;
+          top: 1px;
+        }
+      }
+      &--mustache {
+        padding-left: 46px;
+
+        &::before {
+          left: -11px;
+          top: 6px;
+        }
+      }
+      }
+}
+}
+
+@media @desktop-width {
+  .portfolio {
+
+    &-header {
+      padding-bottom: 61px;
+      padding-top: 20px;
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 48px;
+    }
+    &__item {
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 41px;
+      padding: 0;
+      width: 292px;
+
+      &--month {
+        flex-direction: row;
+        width: 100%;
+
+        &::before {
+          content: "Работа месяца";
+          left: auto;
+          padding-left: 23px;
+          padding-right: 21px;
+          right: 0px;
+          text-align: left;
+          top: 26px;
+        }
+
+        &::after {
+          content: "";
+          background-image:
+            linear-gradient(
+              to bottom left,
+              #be8a65 50%,
+              transparent 50%
+            ),
+            linear-gradient(
+              to top left,
+              #be8a65 50%,
+              transparent 50%
+            );
+          left: auto;
+          right: 172px;
+          top: 26px;
+        }
+
+      }
+      
+    }
+      &__item-photo {
+      width: 294px;
+    }
+    &__item--month &__item-photo {
+      width: 52.1%;
+    }
+    &__item-sub {
+      border: 1px solid #eda570;
+      border-top: none;
+      min-height: 216px;
+      padding: 0;
+      padding-top: 29px;
+      width: 292px;
+    }
+    &__item--month &__item-sub {
+      border: 1px solid #eda570;
+      border-left: none;
+      padding-left: 40px;
+      padding-top: 128px;
+      width: 47.9%;
+    }
+    &__item-description {
+      padding-left: 33px;
+      padding-right: 15px;
+    }
+
+    &__item--month &__item-description {
+      padding: 0;
+    }
+
+    &__item-feedback {
+      padding: 0;
+    }
+
+    &__item--month &__item-feedback {
+      padding-right: 140px;
+    }
+
+    &__item-services {
+      padding-bottom: 14px;
+      padding-left: 32px;
+    }
+
+    &__item--month &__item-services {
+      padding: 0;
+      padding-bottom: 11px;
+    }
+  }
+}

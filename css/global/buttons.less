@@ -13,6 +13,7 @@
 	vertical-align: middle;
 	border: 1px solid #dcc8b4;
 
+
 &:hover {
     border-color: #4a4a4a;
   }
@@ -25,6 +26,9 @@
 	padding: 18px 70px;
 	.container-fluid();
 }
+ &--to-main {
+    display: none;
+  }
 }
 .social-btn {
 		width: 33.333333%;
@@ -45,6 +49,7 @@
     position: absolute;
     transform: translate(50%);
   }
+
   &--vk::after {
     background-position: -10px -312px;
     height: 26px;
@@ -111,6 +116,12 @@
 	width: 160px;
 	text-align: center;
 }
+&--to-main {
+      display: block;
+      background-color: #efe7e7;
+      border: 1px solid #eda570;
+      padding: 12px 35px;
+    }
 	}
 }
 

@@ -59,6 +59,9 @@ b {
     width: 83.5%;
   }
 }
+.btn--to-main {
+  display: none;
+}
 .social-btn {
   width: 33.333333%;
   display: table-cell;
@@ -136,6 +139,12 @@ b {
     padding: 15px 0;
     width: 160px;
     text-align: center;
+  }
+  .btn--to-main {
+    display: block;
+    background-color: #efe7e7;
+    border: 1px solid #eda570;
+    padding: 12px 35px;
   }
 }
 @media (min-width: 1200px) {
@@ -607,13 +616,40 @@ b {
   .page-header {
     background-color: #000;
   }
-  .page-header__logo {
+  .page-header__logo,
+  .page-header__logo---photo {
     background: url("../img/bg-tablet.jpg") center -74px no-repeat;
     background-size: cover;
     height: 402px;
     margin-top: 0;
     order: 2;
     width: 100%;
+    position: relative;
+  }
+  .page-header__logo--photo::after {
+    content: "";
+    background-image: linear-gradient(to top right, transparent 50%, #efe7e7 50%), linear-gradient(to top left, transparent 50%, #efe7e7 50%);
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+  }
+  .page-header__logo--photo:after {
+    background-image: linear-gradient(to bottom left, transparent 50%, #efe7e7 50%), linear-gradient(to bottom right, transparent 50%, #efe7e7 50%);
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 150px;
+    left: 0;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10;
   }
   .page-header__logo img {
     width: 370px;
@@ -1044,7 +1080,9 @@ b {
     width: auto;
     padding: 0;
     margin: 35px 0;
-    width: 70%;
+    width: 90%;
+    font-size: 40px;
+    line-height: 40px;
   }
   .statistic-header__text {
     display: block;
@@ -1080,7 +1118,7 @@ b {
   font-size: 0;
   display: block;
   width: 70px;
-  height: 50px;
+  height: 52px;
   background-color: #6a4d38;
   border: 0;
   cursor: pointer;
@@ -1311,4 +1349,486 @@ b {
   .main-nav__list .main-nav__userblock:before {
     top: 23px;
   }
+}
+.portfolio {
+  background-color: #efe7e7;
+  color: #000;
+}
+.portfolio-header__title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-top: 29px;
+  text-align: center;
+}
+.portfolio-items {
+  padding-bottom: 14px;
+  position: relative;
+}
+.portfolio-items::after {
+  content: "";
+  background-image: linear-gradient(to top right, transparent 50%, #efe7e7 50%), linear-gradient(to top left, transparent 50%, #efe7e7 50%);
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 50.1% 100%;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  z-index: 10;
+}
+.portfolio__item-photo {
+  min-width: 280px;
+  height: 176px;
+}
+.portfolio__item--month .portfolio__item-photo {
+  background-image: url("../img/photo-1-desktop.jpg");
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  font-size: 0;
+  height: 470px;
+  width: 100%;
+}
+.portfolio__item-sub {
+  border: 1px solid #be8a65;
+  border-top: none;
+}
+.portfolio__item {
+  margin: 0 auto;
+  width: 280px;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .portfolio__item {
+    width: 640px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio__item {
+    width: 960px;
+  }
+}
+.portfolio__item--month {
+  position: relative;
+}
+.portfolio__item--month::before {
+  background-color: #be8a65;
+  color: #ffffff;
+  content: "Работа месяца";
+  font-size: 24px;
+  font-weight: bold;
+  left: 0;
+  line-height: 27px;
+  padding-bottom: 11px;
+  padding-left: 27px;
+  padding-right: 17px;
+  padding-top: 12px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 401px;
+}
+.portfolio__item--month::after {
+  content: "";
+  background-image: linear-gradient(to bottom right, #be8a65 50%, transparent 50%), linear-gradient(to top right, #be8a65 50%, transparent 50%);
+  background-position: 0 100%, 0 0;
+  background-repeat: no-repeat;
+  background-size: 80.1% 100%;
+  height: 50px;
+  left: 179px;
+  position: absolute;
+  top: 401px;
+  width: 25px;
+  z-index: 9;
+}
+.portfolio__item-description {
+  padding-bottom: 20px;
+  padding-left: 23px;
+  padding-right: 20px;
+  padding-top: 23px;
+}
+.portfolio__item--month .portfolio__item-description {
+  padding-top: 19px;
+  padding-bottom: 17px;
+}
+.portfolio__item-name {
+  display: block;
+  font-size: 24px;
+  line-height: 27px;
+  margin-bottom: 14px;
+}
+.portfolio__item-feedback {
+  font-size: 18px;
+  margin: 0;
+}
+.portfolio__item-services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 9px;
+}
+.portfolio__item-title {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 18px;
+  padding-right: 20px;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.portfolio__item-title::before {
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+}
+.portfolio__item-title--scissors {
+  padding-left: 58px;
+}
+.portfolio__item-title--scissors::before {
+  background-image: url("../img/scrissors-icon.svg");
+  height: 20px;
+  left: 22px;
+  top: 3px;
+  width: 21px;
+}
+.portfolio__item-title--beard {
+  padding-left: 57px;
+}
+.portfolio__item-title--beard::before {
+  background-image: url("../img/beard-icon.svg");
+  height: 21px;
+  left: 18px;
+  top: 1px;
+  width: 23px;
+}
+.portfolio__item-title--mustache {
+  padding-left: 68px;
+}
+.portfolio__item-title--mustache::before {
+  background-image: url("../img/mustache-icon.svg");
+  height: 12px;
+  left: 12px;
+  top: 6px;
+  width: 45px;
+}
+picture {
+  min-width: 280px;
+}
+@media (min-width: 768px) {
+  .portfolio {
+    position: relative;
+  }
+  .portfolio::after {
+    content: "";
+    background-image: linear-gradient(to top right, transparent 50%, #efe7e7 50%), linear-gradient(to top left, transparent 50%, #efe7e7 50%);
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+  }
+  .portfolio::after {
+    height: 42px;
+    bottom: -42px;
+  }
+  .portfolio-header {
+    margin: 0 auto;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 24px;
+  }
+  .portfolio-items {
+    margin: 0 auto;
+    width: 280px;
+    padding-bottom: 10px;
+  }
+  .portfolio-items::after {
+    content: none;
+  }
+  .portfolio__item {
+    display: flex;
+    margin-bottom: 41px;
+    width: auto;
+  }
+  .portfolio__item--month::before,
+  .portfolio__item--month::after {
+    top: 35px;
+    left: 0px;
+  }
+  .portfolio picture {
+    min-width: 280px;
+    height: 290px;
+  }
+  .portfolio__item-photo {
+    width: 280px;
+    min-height: 290px;
+  }
+  .portfolio__item--month .portfolio__item-photo {
+    height: 480px;
+    width: 46%;
+  }
+  .portfolio__item-sub {
+    border: 1px solid #eda570;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 49px;
+    padding-top: 40px;
+    width: 100%;
+  }
+  .portfolio__item--month .portfolio__item-sub {
+    padding-top: 24px;
+    width: 51%;
+  }
+  .portfolio__item-description {
+    display: block;
+    padding: 0;
+  }
+  .portfolio__item-name {
+    padding-bottom: 12px;
+  }
+  .portfolio__item-feedback {
+    padding-right: 80px;
+  }
+  .portfolio__item--month .portfolio__item-feedback {
+    padding-right: 18%;
+    max-width: 300px;
+  }
+  .portfolio__item-services {
+    padding: 0;
+    padding-bottom: 23px;
+  }
+  .portfolio__item--month .portfolio__item-services {
+    padding-bottom: 16px;
+  }
+  .portfolio__item-title {
+    padding-right: 17px;
+  }
+  .portfolio__item-title--scissors {
+    padding-left: 39px;
+  }
+  .portfolio__item-title--scissors::before {
+    left: 0px;
+    top: 3px;
+  }
+  .portfolio__item-title--beard {
+    padding-left: 39px;
+    padding-right: 40px;
+  }
+  .portfolio__item-title--beard::before {
+    left: 0px;
+    top: 1px;
+  }
+  .portfolio__item-title--mustache {
+    padding-left: 46px;
+  }
+  .portfolio__item-title--mustache::before {
+    left: -11px;
+    top: 6px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .portfolio-header {
+    width: 640px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .portfolio-header {
+    width: 960px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .portfolio-items {
+    width: 640px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .portfolio-items {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio-header {
+    padding-bottom: 61px;
+    padding-top: 20px;
+  }
+  .portfolio-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 48px;
+  }
+  .portfolio__item {
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 41px;
+    padding: 0;
+    width: 292px;
+  }
+  .portfolio__item--month {
+    flex-direction: row;
+    width: 100%;
+  }
+  .portfolio__item--month::before {
+    content: "Работа месяца";
+    left: auto;
+    padding-left: 23px;
+    padding-right: 21px;
+    right: 0px;
+    text-align: left;
+    top: 26px;
+  }
+  .portfolio__item--month::after {
+    content: "";
+    background-image: linear-gradient(to bottom left, #be8a65 50%, transparent 50%), linear-gradient(to top left, #be8a65 50%, transparent 50%);
+    left: auto;
+    right: 172px;
+    top: 26px;
+  }
+  .portfolio__item-photo {
+    width: 294px;
+  }
+  .portfolio__item--month .portfolio__item-photo {
+    width: 52.1%;
+  }
+  .portfolio__item-sub {
+    border: 1px solid #eda570;
+    border-top: none;
+    min-height: 216px;
+    padding: 0;
+    padding-top: 29px;
+    width: 292px;
+  }
+  .portfolio__item--month .portfolio__item-sub {
+    border: 1px solid #eda570;
+    border-left: none;
+    padding-left: 40px;
+    padding-top: 128px;
+    width: 47.9%;
+  }
+  .portfolio__item-description {
+    padding-left: 33px;
+    padding-right: 15px;
+  }
+  .portfolio__item--month .portfolio__item-description {
+    padding: 0;
+  }
+  .portfolio__item-feedback {
+    padding: 0;
+  }
+  .portfolio__item--month .portfolio__item-feedback {
+    padding-right: 140px;
+  }
+  .portfolio__item-services {
+    padding-bottom: 14px;
+    padding-left: 32px;
+  }
+  .portfolio__item--month .portfolio__item-services {
+    padding: 0;
+    padding-bottom: 11px;
+  }
+}
+.price-list {
+  background-color: #353535;
+  color: #ffffff;
+  position: relative;
+  padding: 0 20px;
+  padding-bottom: 19px;
+  padding-top: 50px;
+}
+.price-list::after {
+  content: "";
+  background-image: linear-gradient(to top right, transparent 50%, #353535 50%), linear-gradient(to top left, transparent 50%, #353535 50%);
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 50.1% 100%;
+  height: 35px;
+  left: 0;
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  z-index: 10;
+}
+.price-list__title {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+.price-list__table {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.price-list__table tbody {
+  display: block;
+}
+.price-list__table tr {
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .price-list__table tr {
+    width: 640px;
+  }
+}
+@media (min-width: 1200px) {
+  .price-list__table tr {
+    width: 960px;
+  }
+}
+.price-list__table td {
+  display: block;
+  padding: 0;
+}
+.price-list__table .col-1 {
+  display: none;
+}
+.price-list__table .col-2 {
+  font-weight: bold;
+  padding-left: 0;
+}
+.price-list__table .col-3 {
+  order: 3;
+  padding-left: 0;
+  width: 100%;
+}
+.price-list__table .col-4 {
+  order: 2;
+  padding-right: 0;
+}
+.price-list__discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  outline: 1px solid #7a7272;
+}
+.price-list__discount-clock {
+  fill: #ffffff;
+  width: 35%;
+}
+.price-list__discount-text {
+  margin: 0;
+  width: 59%;
 }
