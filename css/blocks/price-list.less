@@ -75,3 +75,158 @@
     width: 59%;
   }
   }
+
+
+  
+@media @tablet-width {
+  .price-list {
+    padding: 0;
+    padding-top: 90px;
+    padding-bottom: 59px;
+    
+    &::after {
+      content: none;
+    }
+    
+    &__wrapper {
+      .container();
+    }
+    
+    &__title {
+      .container();
+
+      font-size: 40px;
+      text-align: left;
+      padding-bottom: 53px;
+    }
+    
+    &__bracket {
+      display: none;
+    }
+    
+    &__table {
+      display: table;
+      border-spacing: 0;
+      
+      margin-bottom: 11px;
+      
+      tbody {
+        display: table-row-group;
+      }
+      
+      tr {
+        display: table-row;
+        font-size: 22px;
+      }
+      
+      td {
+        display: table-cell;
+        vertical-align: top;
+        padding: 13px 19px;
+        border: 1px solid #4a4848;
+      }
+      
+      .col-1 {
+        color: darkgrey;
+        display: table-cell;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 70px;
+      }
+
+      .col-2 {
+        padding: 13px 19px;
+      }
+
+      .col-3 {
+        order: 2;
+        padding: 13px 19px;
+        padding-left: 18px;
+        padding-right: 5px;
+
+        width: auto;
+      }
+
+      .col-4 {
+        order: 3;
+        padding: 13px 19px;
+        min-width: 105px;
+      }
+    }
+    
+    &__discount {
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    &__discount-clock {
+      height: 70px;
+      width: 20%;
+    }
+
+    &__discount-text {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 71%;
+    }
+
+  }
+}
+
+@media @desktop-width {
+  .price-list {
+    padding-top: 82px;
+    padding-bottom: 84px;
+    
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    &__title {
+      .container();
+
+      width: 100%;
+    }
+
+    &__table {
+      margin: 0;
+      margin-bottom: 0;
+      width: 65.6%;
+
+      .col-4 {
+        min-width: 95px;
+      }
+
+    }
+    
+    &__discount {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 28%;
+    }
+
+    &__discount-clock {
+      height: 139px;
+      padding: 0;
+      padding-bottom: 26px;
+      padding-top: 14px;
+      width: 142px;
+    }
+
+    &__discount-text {
+      font-size: 24px;
+      font-weight: normal;
+      padding: 0 50px;
+      text-transform: none;
+      width: auto;
+    }
+  }
+}
