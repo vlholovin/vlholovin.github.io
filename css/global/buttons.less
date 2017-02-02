@@ -29,6 +29,22 @@
  &--to-main {
     display: none;
   }
+
+  &--submit {
+    background-color: #907042;
+    border: none;
+    color: @white;
+    padding: 13px 0;
+    width: 100%;
+
+    &:hover {
+      background-color: #4a4a4a;
+    }
+
+    &:active {
+      color: #aaa6a2;
+    }
+}
 }
 .social-btn {
 		width: 33.333333%;
@@ -122,9 +138,13 @@
       border: 1px solid #eda570;
       padding: 12px 35px;
     }
+  &--submit {
+    width: 60%;
+    font-size: 14px;
+    line-height: 24px;
 	}
 }
-
+}
 @media @desktop-width {
 	.btn {
 &-news {
@@ -136,6 +156,11 @@
     right: 90px;
     top: 35px;
 }
+&--submit {
+    width: 50%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 }
 
